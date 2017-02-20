@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数调用模式</title>
+</head>
+<body>
+<script>
+    var aDemo = function(){
+        console.log(this);//window;
+    }
+    aDemo();
+    function bDemo(){
+        console.log(this);//window;
+    }
+    bDemo();
+
+</script>
+</body>
+</html>
