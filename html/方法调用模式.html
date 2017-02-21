@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>方法调用</title>
+    <style>
+        strong{
+            color:red;
+        }
+    </style>
 </head>
 <body>
+    <p>
+        一个函数是一个对象的方法，当这个函数被调用的时候，这个函数就视为这个对象的方法；<br>
+        当函数作为一个对象的方法被调用的时候，这个对象就成为了这个函数的上下文（function context）。
+        并且通过<strong>this</strong>函数作为载体存在于函数中。
+    </p>
 <script>
-
+    var aDemo = {};
+    aDemo.whatEver = function(){console.log(this)};
+    aDemo.whatEver();
 </script>
 </body>
 </html>

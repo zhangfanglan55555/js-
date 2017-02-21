@@ -3,8 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>区别</title>
+    <style>
+        em{
+            color:red;
+        }
+    </style>
 </head>
 <body>
+<script src="../js/assert.js"></script>
+<script>
+    //assert(value,desc)
+    //value为true,class值为'pass',否则为'fail'
+    //--------函数调用模式--------
+    function creep(){return this};
+    assert(creep() == window,'在window里爬呀爬呀');
+    var sneak = creep;
+    assert(sneak() == window,'蛇在window里爬呀爬呀');
+    //-------方法调用模式-------
+    var insect = {            //虫子
+        littleInsect:creep
+    }
+    assert(insect.littleInsect() == insect,'insect is littleInsect');
+    var insect2 = {
+        littleInsect: creep
+    };
+    assert(insect2.littleInsect() === insect2, "The insect2  is insect");
 
+
+
+</script>
+<h2>结论：</h2>
+<p>
+    <strong>函数调用模式</strong>的<em>this</em>为window;<br>
+    <strong>方法调用模式</strong>的 <em>this</em> 为方法所属对象<br>
+</p>
+<p>
+     insect1,insect2的littleInsect属性引用的是同一个函数creep,但是执行的时候所产生的 <em>this</em> <br>
+     是不同的，因此函数的 <em>上下文的产生</em>并不由函数的定义来决定而是由 <em>函数的调用</em>来决定。
+</p>
 </body>
 </html>
