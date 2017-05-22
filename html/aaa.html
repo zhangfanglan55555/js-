@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    	div{
+    		width: 200px;
+    		height: 200px;
+    		background-color: red;
+    	}
+        .op-mask {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .color-box {
+            text-align: center;
+            width: 2.2rem;
+            height: 2.2rem;
+            padding-top: 0.3rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 0.1rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1000000;
+            margin: -1.1rem 0rem 0rem -1.1rem;
+        }
+        .color-box img {
+            margin: 0 auto;
+            width: 1.56rem;
+            height: 1.56rem;
+        }
+        img {
+            display: block;
+            border: 0 none;
+            vertical-align: middle;
+        }
+    </style>
+   
+	<script type="text/javascript">
+	// var a = document.getElementById('btn');
+	var div2 = document.getElementById('div2');
+	var a = div2.getElementsByTagName('input');
+	// console.log(a.length);
+	function ab(){
+		for (var i  = 0;i<a.length;i++){
+			alert(a);
+		}
+		
+	}
+
+</script>
+</head>
+<body>
+
+<input type="button" id ='btn' onclick= ab(2) value ='点击'>
+<button onclick = 'ab(3)'>点击2</button>
+<div id="div2"></div>
+
+	
+
+</body>
+</html>

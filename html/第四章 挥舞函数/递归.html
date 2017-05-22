@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>递归</title>
+</head>
+<body>
+<img src="https://css-pre.meixincdn.com/CDN8127/src/images/create-btn.png" alt="">
+<h2>判断字符串是否对称</h2>
+<script>
+    var a = 'abcdefgfedcbdadddd';
+    var b = recursive(a);
+    console.log(b);
+    var c =document.createElement('h3');
+    c.innerHTML = b;
+    document.body.appendChild(c);
+    function recursive(text){
+        if(text.length < 1) return true;
+        if(text.charAt(0) != text.charAt(text.length-1)) return false;
+        return recursive(text.substr(1,text.length-2));
+    }
+</script>
+</body>
+</html>

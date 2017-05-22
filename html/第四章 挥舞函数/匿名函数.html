@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>匿名函数</title>
+</head>
+<body>
+<script src="../../js/assert.js"></script>
+<script>
+    window.onload=function(){assert(true,'power!')}
+    var clothes= {
+        shirt:function(){
+            assert(true,"this is function shrit")//这个为什么先输出了呢？？
+        }
+    }
+    clothes.shirt();
+    assert(true,'我是个打酱油的~');
+    setTimeout(function(){assert(true,'forever')},3000);
+</script>
+<!--输出顺序：-->
+<!--this is function shrit-->
+<!--我是个打酱油的~-->
+<!--power-->
+<!--forever-->
+</body>
+</html>
+
